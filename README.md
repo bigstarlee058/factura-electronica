@@ -119,6 +119,28 @@ Document builders are validated against the official v4.4 XSDs. A gated integrat
 the Hacienda sandbox when `FE_SANDBOX=1` and credentials are present in the environment; it is skipped
 otherwise.
 
+## Costa Rica Hacienda v4.4 references
+
+Official Ministerio de Hacienda / Dirección General de Tributación documentation this package
+implements (v4.4 is mandatory since 2025; it adds `ProveedorSistemas`, clave/consecutivo coding,
+and `CodigoActividadReceptor`):
+
+- **Anexos y Estructuras v4.4** (the authoritative technical spec — document structures + field notes):
+  [portal](https://atv.hacienda.go.cr/ATV/ComprobanteElectronico/frmAnexosyEstructuras.aspx) ·
+  [PDF](https://atv.hacienda.go.cr/ATV/ComprobanteElectronico/docs/esquemas/2024/v4.4/ANEXOS%20Y%20ESTRUCTURAS_V4.4.pdf)
+- **Comprobantes Electrónicos — Generalidades y Versión 4.4** (overview of the changes):
+  [PDF](https://www.hacienda.go.cr/docs/ComprobantesElectronicos-GeneralidadesyVersion4.4.marzo2025.pdf)
+- **Resolución DGT — Disposiciones Técnicas de Comprobantes Electrónicos** (the governing resolution):
+  [PDF](https://www.hacienda.go.cr/docs/DGT-R-000-2024DisposicionesTecnicasDeComprobantesElectronicosCP.pdf)
+- **Official v4.4 XML schemas (XSD)** — bundled in `resources/xsd/v4.4/`, sourced from:
+  `https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/` (e.g.
+  [facturaElectronica.xsd](https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/facturaElectronica.xsd),
+  `facturaElectronicaCompra.xsd`, `facturaElectronicaExportacion.xsd`, `mensajeReceptor.xsd`, …)
+- **XAdES signature policy** — the resolution whose SHA-256 digest is embedded in the `SignaturePolicy`:
+  [Resolución General sobre disposiciones técnicas (PDF)](https://cdn.comprobanteselectronicos.go.cr/xml-schemas/Resoluci%C3%B3n_General_sobre_disposiciones_t%C3%A9cnicas_comprobantes_electr%C3%B3nicos_para_efectos_tributarios.pdf)
+- **ATV — Comprobantes Electrónicos portal:**
+  [atv.hacienda.go.cr](https://atv.hacienda.go.cr/ATV/ComprobanteElectronico/frmInicio.aspx)
+
 ## Contributing
 
 Issues and PRs welcome. Please do not include real cédulas, certificates, signatures, or invoice data
