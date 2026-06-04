@@ -4,3 +4,7 @@ composer.lock
 tests/fixtures/*.p12
 tests/fixtures/**/*.p12
 /tests/_local_golden/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
